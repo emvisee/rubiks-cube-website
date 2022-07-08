@@ -1,1 +1,1 @@
-# rubiksCubeWebsite
+# rubiks-cube-website
