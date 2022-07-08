@@ -1279,23 +1279,23 @@ document.getElementById('menu').addEventListener("mouseout", function () {
     document.getElementById('menu').style.fontSize = "60px";
 });
 
-const stats = new Stats();
+// const stats = new Stats();
 // container = document.getElementById('flex-header');
-document.body.appendChild(stats.domElement);
+// document.body.appendChild(stats.domElement);
 // stats.domElement.style = 'right: 0px; position: fixed';
 
 // stats.domElement.style.right = '0px';
 function animate() {
-    stats.begin();
+//     stats.begin();
     TWEEN.update();
-    stats.update();
+//     stats.update();
     renderer.render(scene, camera);
-    stats.end();
+//     stats.end();
     requestAnimationFrame(animate);
 }
 
 cubeInit();
-console.log("Scene polycount: ", renderer.info.render.triangles);
-console.log("Geometries in memory: ", renderer.info.memory.geometries);
+// console.log("Scene polycount: ", renderer.info.render.triangles);
+// console.log("Geometries in memory: ", renderer.info.memory.geometries);
 animate();
 onWindowResize();
