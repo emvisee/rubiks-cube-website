@@ -1,0 +1,178 @@
+<!-- v3: updated UI -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3D Cube</title>
+        <script src="libraries/three.min.js"></script>
+        <script src="libraries/tween.js"></script>
+        <script src="libraries/OrbitControls.js"></script>
+        <script src="libraries/stats.min.js"></script>
+        <link rel="stylesheet" href="rubiksCubeGeneral.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <script src="scene.js"></script>
+        <div class="flex-menu-header" id="flex-menu-header">
+            <div class="left-side-filler"></div>
+            <div class="flex-header flex-header--animated" id="flex-header">
+                <div class="header header-moves" id="header-moves">
+                    <div class="section-title" id="moves-title">
+                        MOVES
+                    </div>
+                    <div class="moves-grid-flex">
+                        <label class="toggle moves-grid-toggle">
+                            <input type="checkbox">
+                            <span class="toggle-slider moves-element" id="toggle-slider-moves"></span>
+                        </label>
+                        <div class="moves-grid" id="moves-grid">
+                            <button class="button-moves moves-element rotate-front" id="rotate-button-F">F</button>
+                            <button class="button-moves moves-element rotate-back" id="rotate-button-B">B</button>
+                            <button class="button-moves moves-element rotate-left" id="rotate-button-L">L</button>
+                            <button class="button-moves moves-element rotate-right" id="rotate-button-R">R</button>
+                            <button class="button-moves moves-element rotate-up" id="rotate-button-U">U</button>
+                            <button class="button-moves moves-element rotate-down" id="rotate-button-D">D</button>
+                            <button class="button-moves moves-element rotate-front" id="rotate-button-F'">F'</button>
+                            <button class="button-moves moves-element rotate-back" id="rotate-button-B'">B'</button>
+                            <button class="button-moves moves-element rotate-left" id="rotate-button-L'">L'</button>
+                            <button class="button-moves moves-element rotate-right" id="rotate-button-R'">R'</button>
+                            <button class="button-moves moves-element rotate-up" id="rotate-button-U'">U'</button>
+                            <button class="button-moves moves-element rotate-down" id="rotate-button-D'">D'</button>
+                            <button class="button-moves moves-element rotate-front" id="rotate-button-F2">F2</button>
+                            <button class="button-moves moves-element rotate-back" id="rotate-button-B2">B2</button>
+                            <button class="button-moves moves-element rotate-left" id="rotate-button-L2">L2</button>
+                            <button class="button-moves moves-element rotate-right" id="rotate-button-R2">R2</button>
+                            <button class="button-moves moves-element rotate-up" id="rotate-button-U2">U2</button>
+                            <button class="button-moves moves-element rotate-down" id="rotate-button-D2">D2</button>
+                        </div>
+                        <div class="moves-grid-condensed" id="moves-grid-condensed">
+                            <button class="button-moves active-button" id="clockwise-toggle"></button>
+                            <button class="button-moves rotate-front" id="condensed-button-F">F</button>
+                            <button class="button-moves rotate-back" id="condensed-button-B">B</button>
+                            <button class="button-moves" id="counter-clockwise-toggle">'</button>
+                            <button class="button-moves rotate-left" id="condensed-button-L">L</button>
+                            <button class="button-moves rotate-right" id="condensed-button-R">R</button>
+                            <button class="button-moves" id="double-toggle">2</button>
+                            <button class="button-moves rotate-up" id="condensed-button-U">U</button>
+                            <button class="button-moves rotate-down" id="condensed-button-D">D</button>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="header header-settings" id="header-settings">
+                    <div class="section-title" id="settings-title">
+                        SETTINGS
+                    </div>
+                    <div class="settings-flex">
+                        <label class="toggle quality-toggle">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider" id="toggle-slider-quality"></span>
+                        </label>
+                        <div class="sliders-flex">
+                            <div class="slider-main">
+                                <input type="range" min="0" max="10" value="7" id="slider-speed" class="slider">
+                            </div>
+                            <div class="slider-main">
+                                <input type="range" min="0" max="10" value="0" id="slider-shine" class="slider">
+                            </div>
+                            <div class="slider-main">
+                                <input type="range" min="2" max="10" value="10" id="slider-opacity" class="slider">
+                            </div>
+                        </div>
+                        <li class="palette-dropdown" id="palette-dropdown">
+                            <div class="color-menu-container" id="color-menu-container">
+                                <i class='bx bx-palette' id="color-menu"></i>
+                            </div>
+                            
+                            <ul class="dropdown-menu dropdown-menu--animated" id="dropdown-menu">
+                                <!-- <i class='bx bx-palette'></i> -->
+                                <li class="dropdown-palette-3" id="color-nature"><img src="paletteIcons/paletteNature.png" class="palette-custom"></li>
+                                <li class="dropdown-palette-2" id="color-pastel"><img src="paletteIcons/palettePastel.png" class="palette-custom"></li>
+                                <li class="dropdown-palette-1" id="color-default"><img src="paletteIcons/paletteRegular.png" class="palette-custom"></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+    
+                <div class="break"></div>
+
+                <div class="header header-actions" id="header-actions">
+                    <div class="section-title" id="actions-title">
+                        ACTIONS
+                    </div>
+                    <div class="actions-flex">
+                        <button class="button-actions" id="realign"><i class='bx bx-reset'></i></button>
+                        <button class="button-actions" id="idle-rotate"><i class='bx bx-play' id="idle-rotate-icon"></i></button>
+                        <button class="button-actions" id="scramble"><i class='bx bx-shuffle'></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container">
+                <div class="menu" id="menu"><i class='bx bx-menu'></i></div>
+            </div>
+            
+            <!-- <button class="menu" id="menu"><i class='bx bx-menu'></i></button> -->
+        </div>
+
+        <script src="rubiksCube.js"></script>
+<!--                    OLD                     -->
+
+<!-- 
+
+        <div id="flex-header">
+            <div class="rotations">
+                <div class="face-rotations">
+                    <button class="rotate-button" id="rotate-button-F">F</button>
+                    <button class="rotate-button" id="rotate-button-F'">F'</button>
+                    <button class="rotate-button" id="rotate-button-F2">F2</button>
+                </div>
+                <div class="face-rotations">
+                    <button class="rotate-button" id="rotate-button-B">B</button>
+                    <button class="rotate-button" id="rotate-button-B'">B'</button>
+                    <button class="rotate-button" id="rotate-button-B2">B2</button>
+                </div>
+                <div class="face-rotations">
+                    <button class="rotate-button" id="rotate-button-L">L</button>
+                    <button class="rotate-button" id="rotate-button-L'">L'</button>
+                    <button class="rotate-button" id="rotate-button-L2">L2</button>
+                </div>
+                <div class="face-rotations">
+                    <button class="rotate-button" id="rotate-button-R">R</button>
+                    <button class="rotate-button" id="rotate-button-R'">R'</button>
+                    <button class="rotate-button" id="rotate-button-R2">R2</button>
+                </div>
+                <div class="face-rotations">
+                    <button class="rotate-button" id="rotate-button-U">U</button>
+                    <button class="rotate-button" id="rotate-button-U'">U'</button>
+                    <button class="rotate-button" id="rotate-button-U2">U2</button>
+                </div>
+                <div class="face-rotations">
+                    <button class="rotate-button" id="rotate-button-D">D</button>
+                    <button class="rotate-button" id="rotate-button-D'">D'</button>
+                    <button class="rotate-button" id="rotate-button-D2">D2</button>
+                </div>
+            </div>
+            <button class="color-scheme-button" id="color-pastel">Pastel</button>
+            <button class="color-scheme-button" id="color-nature">Earth</button>
+            <button class="color-scheme-button" id="color-default">Default</button>
+            <div class="sliders">
+                <div class="slider-main">
+                    <input type="range" min="0" max="10" value="7" id="slider-speed" class="slider">
+                    <div class="slider-label">Speed</div>
+                </div>
+                <div class="slider-main">
+                    <input type="range" min="0" max="10" value="0" id="slider-shine" class="slider">
+                    <div class="slider-label">Shine</div>
+                </div>
+                <div class="slider-main">
+                    <input type="range" min="2" max="10" value="10" id="slider-opacity" class="slider">
+                    <div class="slider-label">Opacity</div>
+                </div>
+            </div>
+            <button class="idle-inactive" id="idle-rotate">Idle</button>
+            <button class="reset-button" id="reset">Reset</button>
+        </div> -->
+
+        
+    </body>
+</html>
