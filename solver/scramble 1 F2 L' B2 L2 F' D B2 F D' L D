@@ -1,0 +1,39 @@
+scramble 1: F2 L' B2 L2 F' D B2 F D' L D' R2 L' B2 L2 R D B D' U2 R2 L' B L2 F'
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on right side, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: I shape, Antisune
+PLL: Headlights, Ua
+
+
+Cross:  D B' D' D2 F D2 L
+JS:     D B' D' D2 F D2 L
+
+F2L:    U' F U F' F' U' F B' U B R' U R U' L U' L' U L U' L' U L U' L' U' F U F' U F U' F' 
+JS:     U' F U F' F' U' F B' U B R' U R U' L U' L' U L U' L' U L U' L' U' F U F' U F U' F'
+
+OLL: U F R U R' U' F' R U2 R' U' R U' R' 
+JS:
+
+PLL: R U R' U' R' F R2 U' R' U' R U R' F' R U' R U R U R U' R' U' R2 U' 
+JS:
+
+
+Scramble 3
+Cross:  U2 F2 U2 R2 U B2 U' L2 
+JS:     U2 F2 U2 R2 U B2 U' L2
+
+F2L:R U' R' U2 R U' R' F U F' U B U B' U' L U L' U' L U L' U' L' U' L U2 L' U L 
+JS: R U' R' U2 R U' R' F U F' U B U B' U' L U L' U' L U L' U' L' U' L U2 L' U L
+
+OLL:U' R U2 R2 U' R2 U' R2 U2 R 
+JS: R U2 R2 U' R2 U' R2 U2 R
+
+PLL:R U' R U R U R U' R' U' R2 U R U' R U R U R U' R' U' R2 U 
+JS:
+
+  
+
+
+  

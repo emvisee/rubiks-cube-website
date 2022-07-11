@@ -1,0 +1,801 @@
+scramble 1: F2 L' B2 L2 F' D B2 F D' L D' R2 L' B2 L2 R D B D' U2 R2 L' B L2 F'
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on right side, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: I shape, Antisune
+PLL: Headlights, Ua
+
+scramble 2: F L B2 R B' D2 F' B2 U B D' U' B' L2 D' U L D F R2 L' D' F2 R D2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on left side, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, U
+PLL: Headlights, Ua
+
+scramble 3: F' R' F R D' L D' L F2 R' U2 D' R2 U' D2 B2 L' F L D L2 R' B L2 B2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on right side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: Pi
+PLL: H
+
+scramble 4: R D B' D U' R2 L F U2 F' D' R' B' L' U R2 B2 D' L2 U2 R' L D F L2
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on right side, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, U
+PLL: Headlights, skip
+
+scramble 5: R2 L2 F' D' L' F2 D' U2 R2 D2 B2 U' R D2 U2 L U2 R L' F L2 F D L2 F
+0 pair 1: R, G | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: Dot shape, H
+PLL: Headlights, Ub
+
+scramble 6: D2 L' U R' B F' L D' U' F2 D2 L R' F2 L' B2 R2 D2 U B D' B2 L2 U' F
+0 pair 1: R, G | corner on bottom, edge on top, white on right side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: Dot shape, L
+PLL: Headlights, skip
+
+scramble 7: F2 B L' U' D2 B' D R2 B2 L R2 U' B' D2 B2 R F' B2 U L' D' R2 U R L'
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, U
+PLL: Headlights, Ua
+
+scramble 8: R F' U2 F2 L' D F2 B' U R B' F' U2 L F D B F' D' U' R' F' L2 U F'
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on bottom, pair inserted
+OLL: I shape, U
+PLL: Headlights, Ub
+
+scramble 9: U R' F2 U' L2 B' R2 U L F2 D R2 B' D F' L U B F U' D L D L U
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on left side, pair inserted
+OLL: I shape, U
+PLL: Headlights, Ua
+
+scramble 10: U2 R2 D F' L B' U' F' D' R B D2 U' F R' F' U2 F' U' D' F D2 R' F2 R'
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: Dot shape, L
+PLL: Diagonal, Ub
+
+scramble 11: F2 D' R2 F U2 F U D L' R2 D2 L2 F R F2 L' U R' D' U' R' B' D2 F' B2
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on left side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on top, pair inserted
+OLL: L shape, T
+PLL: Headlights, Ub
+
+scramble 12: R F' U2 R2 F L2 D' F R' D F R2 U' D' B2 R' U L' R2 U2 R' B U2 L U2
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, Pi
+PLL: Headlights, Ua
+
+scramble 13: B U2 F D' B2 L2 U' F B R2 U2 L R' U2 B2 U2 B2 L B' R2 U2 R' U2 L' B2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, Pi
+PLL: skip
+
+scramble 14: F' U' D' R U2 L2 D R' F2 R' U F' B' D L2 B2 D2 R' L D F2 D' B F D'
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: Dot shape, T
+PLL: Headlights, Ub
+
+scramble 15: D2 L U' D2 L2 U' F' B' U' L' F' B' R2 F' D U' B F' R L U L D U' L
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, T
+PLL: Headlights, H
+
+scramble 16: B' R2 B2 R F' B U' F' U' L D R' U2 F2 B' U' R' L' B2 D' L2 R2 D2 F R2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, Sune
+PLL: Headlights, Ua
+
+scramble 17: F U D' R B' F2 L2 U2 B2 U' L' R' U2 B' D2 F L2 R' U' B F U' R2 F B'
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on left side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: I shape, T
+PLL: Diagonal, skip
+
+scramble 18: U2 L2 F D' B2 U' D2 R' L D' L' U2 R' U' L U2 L2 D2 U2 F' R' L' D' L D2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: I shape, T
+PLL: Diagonal, Ua
+
+scramble 19: R2 U2 L2 B R' B2 U' L' R2 D' B D U B2 L2 R2 U2 D B2 L2 U B2 U L2 D2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, Pi
+PLL: Ua
+
+scramble 20: L' D F R' B2 F' U2 L2 U L2 U' B2 U R' U2 D L2 D2 F L R' D L B2 R'
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on right side, pair inserted
+OLL: I shape, Antisune
+PLL: Headlights, Ua
+
+scramble 21: D2 R L' F' L2 U' R2 D L2 U L2 U B U F2 U2 D' L2 U' F R2 F2 U' B' L
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on side, pair inserted
+OLL: L shape, Sune
+PLL: Headlights, Ua
+
+scramble 22: D R' D2 R' D F2 L R' F' U D2 F L2 B2 U2 B R' F2 R D' L R U L2 F
+0 pair 1: R, G | corner on bottom, edge on top, white on left side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, L
+PLL: Headlights, skip
+
+scramble 23: L' R F R2 F U' L2 D R' B R2 B' U2 F' L F L U2 D R' U' B' F R2 D
+0 pair 1: R, G | corner on bottom, edge on top, white on left side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: L shape, H
+PLL: Headlights, Ua
+
+scramble 24: U2 F2 U' L2 U F2 L' B R' F' L2 D2 B U' F2 D' U' B2 F D2 L2 D' F B2 R
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on left side, pair inserted
+OLL: L shape, Antisune
+PLL: Diagonal, Ua
+
+scramble 25: R' F' R' L2 F2 B' D U2 R' U B' F D' R' D' B' R F2 R' B2 F2 D' R' L' D2
+0 pair 1: R, G | corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, T
+PLL: Headlights, Z
+
+scramble 26: L' F U R F2 B2 L' R2 F' B' U2 R L' B' D' F2 D2 R' F2 L' B F' U D2 R'
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: L shape, Sune
+PLL: Headlights, Ub
+
+scramble 27: L' U' D B2 L B U L B R' F2 D R' F R2 D2 U F2 B' R F L2 R' F' U
+0 pair 1: R, G | corner on bottom, edge on top, white on right side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on bottom, pair inserted
+OLL: L shape, Sune
+PLL: Headlights, Ub
+
+scramble 28: U2 L B L' U2 F U' D L2 R2 D' L2 F B' R2 F D F2 D R2 L B L B2 D2
+0 pair 1: R, G | corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on top, pair inserted
+OLL: L shape, T
+PLL: Headlights, H
+
+scramble 29: B2 L B L F' B D L2 B2 L R F B2 U' L2 U' F' L2 B' D' F' D2 F' U2 L2
+0 pair 1: R, G | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, L
+PLL: Headlights, Ub
+
+scramble 30: L R2 D2 F2 L' D2 F2 L D R2 L' B2 L2 B L' D U R U2 R L U2 B L B'
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: Dot shape, Pi
+PLL: Headlights, H
+
+scramble 31: B2 L' D2 U2 B2 F' U2 L' B D2 F' U' F D F2 L F' R2 L' U' R' U L2 R' U
+0 pair 1: R, G | corner on bottom, edge on top, white on left side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on left side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, H
+PLL: Headlights, Ua
+
+scramble 32: D' B L2 B2 D' L2 U L U' L B' L' R U2 B F D' U' R B' U2 R2 L F' U2
+0 pair 1: R, G | corner on bottom, edge on top, white on right side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, Sune
+PLL: Headlights, Ua
+
+scramble 33: F2 U R2 B2 R2 L' F L' B2 F' L' B' U' F R B2 L2 D2 B2 F2 L D2 R' D F'
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on bottom, pair inserted
+OLL: L shape, skip
+PLL: Headlights, Ua
+
+scramble 34: L2 B2 D2 B' F2 D' U2 B F' L2 U2 L2 B L2 R U R U' L2 D' B' R2 U' D2 L'
+0 pair 1: R, G | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, Pi
+PLL: Headlights, Z
+
+scramble 35: B D2 L D2 B2 L D B U2 B L2 D' L D2 B2 U2 B' L B F D' F2 L' R' B2
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: U
+PLL: Headlights, Ua
+
+scramble 36: L2 U2 D2 L' D2 F' U F2 L U' R L B2 U2 L2 D' B' D' F' R' D' F' D2 F R
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, Pi
+PLL: Headlights, Ub
+
+scramble 37: D2 U F' B R' L2 D F B U' F2 B2 L2 D' F L B D2 U' B D2 F D' L F2
+0 pair 1: R, G | corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on top, pair inserted
+OLL: L shape, skip
+PLL: Ua
+
+scramble 38: L F2 D B2 F L' F D U' L2 U2 L' B' R F' L2 U L' D' R2 U2 R2 B' R L'
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: H
+PLL: Headlights, H
+
+scramble 39: L F' D' B U2 R2 B' F2 L U L F2 U D F2 B2 R2 U D2 L' D2 F' L F D'
+0 pair 1: R, G | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: Sune
+PLL: Headlights, Ub
+
+scramble 40: F2 B2 U F R B2 U' B' R' F B L' D U2 L R D' R' D F' D' L' D R F2
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, Pi
+PLL: Headlights, Z
+
+scramble 41: R2 L' U D2 F' L' D' L R' F R D' U2 L B R B' D U' F' R F U' B U
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on right side, pair inserted
+OLL: L shape, T
+PLL: Headlights, Z
+
+scramble 42: U B' F U2 B2 D' L2 R U D' L' U2 R2 F2 U2 L2 B2 L B2 U' B2 R' F2 U' B'
+0 pair 1: R, G | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on left side, pair inserted
+OLL: I shape, L
+PLL: Diagonal, Ub
+
+scramble 43: D' L2 U B2 U B' R' D B' U2 F D2 U' F2 L D2 U2 L' F U' D2 L' U2 R D2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, U
+PLL: Headlights, Z
+
+scramble 44: R B D2 B' F' R' L F' U R' U' B2 U' F' R2 B2 F L2 D2 R2 B2 D' R2 D' B
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, U
+PLL: Ua
+
+scramble 45: D B U D2 F2 B2 R' F2 B' R D2 R L2 U' R2 B' F2 U2 R L D2 U2 B' F' L2
+0 pair 1: R, G | corner on bottom, edge on top, white on bottom, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on left side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: I shape, L
+PLL: Headlights, Ua
+
+scramble 46: B' U B2 U L R' D' B' U2 D' L2 F' U D2 R D R2 L U' F2 R' F U' B2 R'
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: L shape, Sune
+PLL: Headlights, Ub
+
+scramble 47: B' R L2 F R2 L2 U B L' R F D' U' R L2 U2 D F B U R F' U L2 B2
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, U
+PLL: Diagonal, Ua
+
+scramble 48: F2 R D2 L' D B2 U' R2 U F' U2 F' L2 R' B2 L' D L2 F B' R L2 D F L2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on bottom, pair inserted
+OLL: I shape, L
+PLL: Headlights, Z
+
+scramble 49: R2 F' U' D2 R2 F R L' F U' R' F2 B2 U B' U R2 U B2 F2 D' L D L' D2
+0 pair 1: R, G | corner on bottom, edge on top, white on bottom, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on right side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on right side, pair inserted
+OLL: L shape, Sune
+PLL: Ua
+
+scramble 50: U' B' L2 R' D2 U F U' D2 F D L' F L' U' R2 F2 D' U' R2 L' D F U2 L
+0 pair 1: R, G | corner on bottom, edge on top, white on bottom, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on bottom, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on left side, pair inserted
+OLL: L shape, L
+PLL: Headlights, Z
+
+scramble 51: B R' L' B2 L' D2 R' B R2 L' F2 U2 L2 R2 B R2 U2 D B D F2 D' F U D'
+0 pair 1: R, G | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: L shape, Sune
+PLL: Headlights, Ub
+
+scramble 52: D2 R2 D2 B' R' D F B2 D R2 D2 L2 D' B2 R2 D' L' U B D F U B2 L R2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on side, pair inserted
+OLL: L shape, L
+PLL: Diagonal, Z
+
+scramble 53: D' L2 D2 U2 F L2 R' F2 B' D U F D' U' B2 L2 D' U' B U B R2 U L D'
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, L
+PLL: Headlights, Ua
+
+scramble 54: L2 D2 F' B' L' F D' B2 L2 B R U' D2 R' D R U F L2 U D' L F2 L D2
+0 pair 1: R, G | corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on left side, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on right side, pair inserted
+OLL: Pi
+PLL: Headlights, Ua
+
+scramble 55: U' L' F2 R F' B' R2 L' F' D R2 L' U' R B2 U2 B2 U2 L' D' B' F' U R F'
+0 pair 1: R, G | corner on bottom, edge on top, white on right side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, pair inserted
+OLL: L shape, Sune
+PLL: Ua
+
+scramble 56: R U' B' F' R2 U' L2 B2 F2 R L2 U' F' R2 B2 U2 B F2 L D U2 B2 U' D F'
+0 pair 1: R, G | corner on bottom, edge on top, white on bottom, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, T
+PLL: Headlights, Z
+
+scramble 57: F' L B' L R D R' B' D2 B U B' L' U L F L' F U' L F' D2 R2 F U
+0 pair 1: R, G | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on bottom, pair inserted
+OLL: L shape, Pi
+PLL: Headlights, Ua
+
+scramble 58: F' L D B D2 F D U L2 U2 R' F L2 R2 F2 R L' U' F2 L' F' L2 U R' B'
+0 pair 1: R, G | corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on left side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, Sune
+PLL: Headlights, Ub
+
+scramble 59: R' D2 L F2 U' D' F2 U2 R' D B2 L2 F' B L D' F' L2 D' U2 F' R2 L2 U' D2
+0 pair 1: R, G | corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, skip
+PLL: Headlights, Ub
+
+scramble 60: L U2 D2 R2 U2 B' F U' D2 R2 F R2 L' U2 D' R2 U2 B F R' D L D2 U2 B'
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, U
+PLL: Headlights, Ub
+
+scramble 61: L R2 D L2 R2 U' D' R2 B L2 F2 U2 R L B2 L R U' D2 F L' D2 L' U2 F2
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on left side, pair inserted
+OLL: I shape, Antisune
+PLL: Headlights, Z
+
+scramble 62: B2 U' D' R' L B L' B L2 D2 R L2 U' B U2 B2 F' R U' L' R' U2 B2 D2 U
+0 pair 1: R, G | corner on bottom, edge on top, white on right side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on top, pair inserted
+OLL: L shape, Antisune
+PLL: Diagonal, Ua
+
+scramble 63: U B' U L' R' U' B2 L B U2 L B2 D U L2 U' B2 U2 R2 U F2 B' L' F D2
+0 pair 1: R, G | corner on bottom, edge on top, white on bottom, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on side, pair inserted
+OLL: L shape, Antisune
+PLL: Headlights, H
+
+scramble 64: B2 U2 B F' U F2 L U D2 R2 U' D' R2 F L U' B2 R L' F2 U2 L F2 B' D
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, Antisune
+PLL: Headlights, Ua
+
+scramble 65: B U' R' F2 R D U R' F2 B2 D F' L B' F' U L2 D2 R L2 F D2 B' L F'
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on left side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on left side, pair inserted
+OLL: L shape, L
+PLL: Headlights, Ub
+
+scramble 66: D' B2 R2 F D' R F2 U' L' U R D' U2 R' F' B2 R2 D' U R' F2 D' F2 L2 R'
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on right side, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, pair inserted
+OLL: L shape, H
+PLL: Diagonal, H
+
+scramble 67: U B' R D B' D' L' D2 F R2 B' R' L D U' F' B' D U L R' F B D R2
+0 pair 1: R, G | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on left side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, Antisune
+PLL: Headlights, Ua
+
+scramble 68: L2 B' L' B R' L2 F' R L' U F2 B U2 D' R' U' R2 L2 U' R' L2 U2 L' R' U'
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on bottom, pair inserted
+OLL: Dot shape, Pi
+PLL: Headlights, Ub
+
+scramble 69: L B R' U B2 L D2 L' D2 U2 F2 R' F U' R' F2 L' U2 L B L2 D' B D F'
+0 pair 1: R, G | corner on bottom, edge on top, white on right side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, L
+PLL: Headlights, Ua
+
+scramble 70: D2 L U' F2 B' L D2 B2 R' F' B2 U2 B' R L F2 B U D R2 U2 D2 R D2 B
+0 pair 1: R, G | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, U
+PLL: Z
+
+scramble 71: R U' R2 D' U B2 F2 U2 B D U F D L' R2 B' R F U' L R' D' R' B F
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, T
+PLL: Headlights, Ua
+
+scramble 72: R' F' D B L R' B U' D2 B2 F2 R' D' L2 F L' D B' R2 U' L' F' B2 D2 L'
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, U
+PLL: Headlights, Ub
+
+scramble 73: L R2 U' D' L2 R2 D' L' D' L2 U2 L B' R D' B' D L' R' F' B' D B2 L2 F'
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, T
+PLL: Diagonal, Ua
+
+scramble 74: B' R2 B' D' U' L B2 F U' L U R' U D L2 F' U' D2 B' D L' R U' B L2
+0 pair 1: R, G | corner on bottom, edge on top, white on bottom, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on right side, pair inserted
+OLL: I shape, L
+PLL: Headlights, Ub
+
+scramble 75: D U F B2 D L U2 R F' B L2 U2 B2 R2 D2 F2 U' B' L' R2 B L2 R F L'
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: I shape, U
+PLL: Headlights, H
+
+scramble 76: F2 R2 B' F L2 B F' D2 B2 R B2 L F2 R F B2 D' R' F' R2 D B' F D' R
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on left side, pair inserted
+OLL: I shape, U
+PLL: Diagonal, skip
+
+scramble 77: U F2 L' D R D U2 R' U2 L R' F2 U' D' R' B R D2 R D R D B' F D
+0 pair 1: R, G | corner on bottom, edge on top, white on left side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on bottom, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: Antisune
+PLL: Headlights, Z
+
+scramble 78: F D B' L F2 L U F2 L F L' F2 R2 B2 D' L B2 D2 L R D L F2 D' R'
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, Pi
+PLL: Headlights, H
+
+scramble 79: U2 F' U' L' B R L U F2 R' D B' R L D R D U L D R2 D2 F' U2 D2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: Antisune
+PLL: Headlights, Ub
+
+scramble 80: U2 L2 R2 D L F2 D B' R U2 B' D L2 D2 L' U F U' D' R F2 L F2 U D
+0 pair 1: R, G | corner on bottom, edge on top, white on right side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, U
+PLL: Headlights, H
+
+scramble 81: U R2 L2 B' R' B R' U' F2 L2 F2 B2 U2 B U' B' D F D U' F U2 L' R2 U
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on left side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on left side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, T
+PLL: Ub
+
+scramble 82: R U2 B D' L F2 U' B2 R2 D' R2 L2 D2 L' D U F2 R L' F' L2 F2 R2 F' U2
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on right side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on top, white on left side, pair inserted
+OLL: L shape, Antisune
+PLL: Diagonal, Ub
+
+scramble 83: U' B L' R' D' U F' U' F' B2 L2 F2 U' L2 D2 B R' L' D U L' D2 U R2 L'
+0 pair 1: R, G | corner on bottom, edge on top, white on left side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on left side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, L
+PLL: Headlights, Ub
+
+scramble 84: L' U2 F U' F2 B R D' U F L F' L F B U F R D F D R' D' L R'
+0 pair 1: R, G | corner on bottom, edge on top, white on left side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, H
+PLL: Ua
+
+scramble 85: R' F' R2 L' F2 B L U D F' D2 F' D' U2 B R2 D2 U B D' L U D B' R
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: I shape, L
+PLL: Headlights, H
+
+scramble 86: B' L2 U2 R2 L' B' U L' U' F' R F' U2 D L2 B2 D R2 B' D' F R2 B' R' U2
+0 pair 1: R, G | corner on bottom, edge on top, white on left side, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, Sune
+PLL: Headlights, Ub
+
+scramble 87: D2 B D F R2 L U L R' U D2 B D2 F' D2 F D L U' R' B2 U R' F2 D'
+0 pair 1: R, G | corner on top, white on top, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, U
+PLL: Headlights, Ua
+
+scramble 88: D R D' U' R U F' U' F2 D2 R2 L' U2 F R2 L' F' D2 U2 L2 D2 R' U2 L2 R2
+0 pair 1: R, G | corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: I shape, skip
+PLL: Headlights, Ua
+
+scramble 89: U R F D2 L B R2 U2 F2 L2 R B2 U' D' L D L2 R' U2 B2 D' F D U2 F'
+0 pair 1: R, G | corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on top, pair inserted
+OLL: L shape, Sune
+PLL: Headlights, Ua
+
+scramble 90: B' R D2 R' L2 B' F2 L D B F U2 F2 B' R F' L2 D' R L' B' U R' L F
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: Dot shape, U
+PLL: Headlights, Ub
+
+scramble 91: D2 B' D2 U' F2 R' D' L2 U D2 F D2 B R2 D2 L R2 F B2 U B2 U2 R B R2
+0 pair 1: R, G | corner on bottom, edge on top, white on bottom, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on left side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: L shape, Pi
+PLL: Diagonal, Ua
+
+scramble 92: B' R U B' F' L' U B2 D L2 F' L' F L' D U R L U D B' F' U F2 U2
+0 pair 1: R, G | corner on bottom, edge on top, white on left side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on top, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: H
+PLL: Headlights, Z
+
+scramble 93: U2 B' F' R B R' D' R' D2 R' U F2 R' D2 F' L' U D2 L2 D' F2 D B2 L U
+0 pair 1: R, G | corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on top, white on right side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on top, pair inserted
+OLL: Dot shape, Pi
+PLL: Headlights, Z
+
+scramble 94: R D L B F2 R' D2 R U2 R' B2 F' U F' L' U2 L U2 D F' B' L D L U
+0 pair 1: R, G | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on left side, pair inserted
+3 pair 4: B, R | corner on top, white on side, edge on side, pair inserted
+OLL: L shape, L
+PLL: Headlights, Z
+
+scramble 95: B2 L2 F2 L D2 R U2 F B2 R' F' B L' B' L' F' B' R2 F' D R L U2 L D2
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on top, pair inserted
+OLL: I shape, U
+PLL: Headlights, Ua
+
+scramble 96: D' B' U2 R' D' U2 R B' L' B L2 F B L2 F2 B L F2 B2 U F2 D2 U2 R2 U'
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on top, pair inserted
+OLL: I shape, Sune
+PLL: Headlights, Ua
+
+scramble 97: F2 U' B2 U2 D F' L' R D2 U B2 F2 R D2 B L D' U B2 U2 D' B2 R' B2 L
+0 pair 1: R, G | corner on top, white on side, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on bottom, edge on top, white on right side, pair inserted
+3 pair 4: B, R | corner on top, white on top, edge on side, pair inserted
+OLL: I shape, L
+PLL: Headlights, Ub
+
+scramble 98: R' D U F L' F U2 F2 R D' F L2 F2 D' F2 U' B' R F' R' F' R' D L2 F2
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on top, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on side, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, white on left side, corner on top, white on side, edge on top, pair inserted
+OLL: Dot shape, L
+PLL: Headlights, skip
+
+scramble 99: L U2 R2 B' R' B2 U' R B' R2 D R' U2 B F2 D L' B U R2 L F' L' B U
+0 pair 1: R, G | corner on bottom, edge on side, white on right side, corner on top, white on top, edge on top, pair inserted
+1 pair 2: G, O | corner on top, white on top, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, pair inserted
+OLL: I shape, T
+PLL: Headlights, Z
+
+scramble 100: D2 L F2 B2 L2 U B' R B2 L2 U' B' D B' L2 R' F L R' D2 U' F U B F2
+0 pair 1: R, G | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on side, pair inserted
+1 pair 2: G, O | corner on top, white on side, edge on side, pair inserted
+2 pair 3: O, B | corner on top, white on side, edge on top, pair inserted
+3 pair 4: B, R | corner on bottom, edge on side, white on bottom, corner on top, white on side, edge on top, pair inserted
+OLL: L shape, U
+PLL: Headlights, Ub
+
+success rate: 100 / 100 (100%)

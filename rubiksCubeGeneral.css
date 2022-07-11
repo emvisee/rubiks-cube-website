@@ -314,17 +314,27 @@ input:checked + .toggle-slider:before {
     animation: rotateX 300ms 180ms ease-in-out forwards;
 }
 
+.dropdown-menu .dropdown-palette-4 {
+    transform-origin: bottom center;
+    animation: rotateX 300ms 240ms ease-in-out forwards;
+}
+
 .dropdown-menu--off .dropdown-palette-1 {
     transform-origin: bottom center;
-    animation: rotateXRev 300ms 180ms ease-in-out backwards;
+    animation: rotateXRev 300ms 240ms ease-in-out backwards;
 }
 
 .dropdown-menu--off .dropdown-palette-2 {
     transform-origin: bottom center;
-    animation: rotateXRev 300ms 120ms ease-in-out backwards;
+    animation: rotateXRev 300ms 180ms ease-in-out backwards;
 }
 
 .dropdown-menu--off .dropdown-palette-3 {
+    transform-origin: bottom center;
+    animation: rotateXRev 300ms 120ms ease-in-out backwards;
+}
+
+.dropdown-menu--off .dropdown-palette-4 {
     transform-origin: bottom center;
     animation: rotateXRev 300ms 60ms ease-in-out backwards;
 }
@@ -406,6 +416,10 @@ input:checked + .toggle-slider:before {
 .active-button {
     background-color: rgb(var(--buttons-bg-color), 1);
     color: rgb(var(--font-color), 1);
+    opacity: 1;
+}
+
+.active-button:hover {
     opacity: 1;
 }
 

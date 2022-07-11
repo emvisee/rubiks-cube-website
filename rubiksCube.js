@@ -1,66 +1,3 @@
-/*
-Menu:
-Moves, Styles, Actions
-*/
-
-// let scene, renderer, camera, innerHeight;
-
-
-// // earth, nature
-// // annie's homescreen
-// // electric
-// // MURICA THEME
-
-// function init() {
-//     scene = new THREE.Scene();
-//     // scene.background = new THREE.Color("rgb(200, 200, 200)");
-
-//     innerHeight = window.innerHeight - 126;
-//     camera = new THREE.PerspectiveCamera(50, window.innerWidth/innerHeight, 0.5, 30);
-//     camera.position.z = 10;
-
-//     renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
-//     renderer.setSize(window.innerWidth, innerHeight);
-//     renderer.setClearColor( 0x000000, 0 );
-//     renderer.setPixelRatio(window.devicePixelRatio);
-//     document.body.appendChild(renderer.domElement);
-
-//     window.addEventListener("resize", onWindowResize, false);
-
-//     // Light
-//     // let ambientLight =  new THREE.AmbientLight(0xFFFFFF, 0.3);
-//     // let hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 2);
-//     let light = new THREE.PointLight(0xFFFFFF, 0.7, 0, 1);
-//     let light2 = light.clone();
-//     let light3 = light.clone();
-//     let light4 = light.clone();
-//     let posConst = 25;
-//     light.position.set(0, posConst, 0);
-//     light2.position.set(-posConst, 0, posConst);
-//     light3.position.set(posConst, 0, posConst);
-//     light4.position.set(0, -posConst, 0);
-//     // scene.add(hemiLight);
-//     // scene.add(ambientLight);
-//     scene.add(light);
-//     scene.add(light2);
-//     scene.add(light3);
-//     scene.add(light4);
-//     // scene.add(light5);
-
-//     // Cube rotation + resize
-//     mouseDown = false,
-//         mouseX = 0,
-//         mouseY = 0;
-
-//     window.addEventListener('mousewheel', onMouseWheel, false);
-//     window.addEventListener('mousemove', function (e) { onMouseMove(e); }, false);
-//     window.addEventListener('mousedown', function (e) { onMouseDown(e); }, false);
-//     window.addEventListener('mouseup', function (e) { onMouseUp(e); }, false);
-
-//     // OrbitControls
-//     // let controls = new THREE.OrbitControls(camera, renderer.domElement);
-// }
-
 window.addEventListener('mousewheel', onMouseWheel, false);
 window.addEventListener('mousemove', function (e) { onMouseMove(e); }, false);
 window.addEventListener('mousedown', function (e) { onMouseDown(e); }, false);
@@ -462,6 +399,7 @@ let basicStickers = [];
 function createCubie(x, y, z, geoCubie, matCubie, matCubieBasic, geoSticker, geoBox) {
     let cubie = new THREE.Group();
     let stickers = new THREE.Group();
+    stickers.name = "stickers";
     cube.attach(cubie);
     cubie.attach(stickers);
     
@@ -561,6 +499,7 @@ function createCubie(x, y, z, geoCubie, matCubie, matCubieBasic, geoSticker, geo
 
 function changeColorScheme(colorScheme) {
     // R L U D F B
+    // G B Y W R O
     if (colorScheme == 'pastel') {
         stickerColors[0].set("rgb(193, 225, 193)");
         stickerColors[1].set("rgb(174, 198, 207)");
@@ -578,6 +517,15 @@ function changeColorScheme(colorScheme) {
         stickerColors[4].set(0x8B341F);
         stickerColors[5].set(0xB87F45);
         baseColor = "#404040";       
+    }
+    else if (colorScheme == 'universal') {
+        stickerColors[0].set("rgb(33, 255, 144)");
+        stickerColors[1].set("rgb(33, 33, 253)");
+        stickerColors[2].set("rgb(25, 25, 25)");
+        stickerColors[3].set("rgb(255, 255, 255)");
+        stickerColors[4].set("rgb(253, 30, 31)");
+        stickerColors[5].set("rgb(255, 161, 255)");
+        baseColor = "#404040";
     }
     else {
         stickerColors[0].set("rgb(0, 155, 72)");
@@ -1116,7 +1064,7 @@ document.getElementById('palette-dropdown').addEventListener("mouseover", functi
         document.getElementById('dropdown-menu').style.display = "none";
         paletteShow = false;
     }
-    console.log("mouseover");
+    // console.log("mouseover");
     document.getElementById('dropdown-menu').style.display = "block";
     document.getElementById('dropdown-menu').classList.remove('dropdown-menu--off');
     paletteShow = true;
@@ -1124,7 +1072,7 @@ document.getElementById('palette-dropdown').addEventListener("mouseover", functi
 
 document.getElementById('palette-dropdown').addEventListener("mouseout", function () {
     document.getElementById('settings-title').innerHTML = "SETTINGS";
-    console.log("mouseout");
+    // console.log("mouseout");
     document.getElementById('dropdown-menu').classList.add('dropdown-menu--off');
     paletteTimeout = setTimeout(function () {
         document.getElementById('dropdown-menu').style.display = "none";
@@ -1132,8 +1080,8 @@ document.getElementById('palette-dropdown').addEventListener("mouseout", functio
     }, 500);
 });
 
-let colorIDs = ['color-menu-container', 'color-pastel', 'color-nature', 'color-default'];
-let colorHTML = ["PALETTE", "PASTEL", "EARTH", "DEFAULT"];
+let colorIDs = ['color-menu-container', 'color-pastel', 'color-nature', 'color-default', 'color-universal'];
+let colorHTML = ["PALETTE", "PASTEL", "EARTH", "DEFAULT", "UNIVERSAL (KYO TAKONO)"];
 for (let i = 0; i < colorIDs.length; ++i) {
     if (i != 0) {
         document.getElementById(colorIDs[i]).addEventListener("click", function () {
@@ -1151,8 +1099,8 @@ for (let i = 0; i < colorIDs.length; ++i) {
 
 //////////////////// ACTIONS ////////////////////
 // Action buttons
-let actionIDs = ['realign', 'idle-rotate', 'scramble'];
-let actionHTML = ["REALIGN", "IDLE", "SCRAMBLE"];
+let actionIDs = ['realign', 'idle-rotate', 'scramble', 'solve'];
+let actionHTML = ["REALIGN", "IDLE", "SCRAMBLE", "SOLVE"];
 for (let i = 0; i < actionIDs.length; ++i) {
     if (i == 1) {
         document.getElementById(actionIDs[i]).addEventListener("mouseover", function () {
@@ -1197,7 +1145,9 @@ document.getElementById('realign').addEventListener("click", function () {
 let scrambleOn = false;
 document.getElementById('scramble').addEventListener("click", function () {
     if (!scrambleOn) {
-        toggleOnScramble(true);
+        toggleButtons(true);
+        document.getElementById('solve').classList.add('disabled-button');
+        document.getElementById('solve').disabled = true;
         document.getElementById('scramble').className = "button-actions active-button";
         scrambleOn = true;
         let scrambleFaces = [front, back, left, right, up, down];
@@ -1214,7 +1164,9 @@ document.getElementById('scramble').addEventListener("click", function () {
                     document.getElementById('scramble').className = "button-actions";
                     scrambleOn = false;
                     setTimeout(unlock, (sliderDuration + 75));
-                    toggleOnScramble(false);
+                    toggleButtons(false);
+                    document.getElementById('solve').classList.remove('disabled-button');
+                    document.getElementById('solve').disabled = false;
                 }
             }, (sliderDuration + 75) * i);
             prevA = a;
@@ -1222,7 +1174,7 @@ document.getElementById('scramble').addEventListener("click", function () {
     }
 });
 
-function toggleOnScramble(disable) {
+function toggleButtons(disable) {
     let buttonMoves = document.getElementsByClassName('button-moves');
     for (let i = 0; i < buttonMoves.length; ++i) {
         if (disable) {
@@ -1242,6 +1194,178 @@ function toggleOnScramble(disable) {
         document.getElementById('slider-speed').classList.remove('disabled-button');
         document.getElementById('slider-speed').disabled = false;
     }
+}
+
+let solving = false;
+document.getElementById('solve').addEventListener("click", function() {
+    if (!solving) {
+        toggleButtons(true);
+        document.getElementById('scramble').classList.add('disabled-button');
+        document.getElementById('scramble').disabled = true;
+        document.getElementById('solve').className = "button-actions active-button";
+        solving = true;
+        map = getColorMap();
+        let cube = new RubiksCube(map);
+        cube.solveCross();
+        cube.solveF2L();
+        cube.solveOLL();
+        cube.solvePLL();
+        moves = cube.moves;
+
+        let moveConv = {
+            "F": front,
+            "B": back,
+            "L": left,
+            "R": right,
+            "U": up,
+            "D": down
+        };
+        for (let i = 0; i < moves.length; ++i) {
+            let direction = "clock";
+            if (moves[i].length == 2) {
+                direction = moves[i][1] == "2" ? "double" : "counter";
+            }
+            setTimeout(function () {
+                onClickRotate(moveConv[moves[i][0]], direction, true);
+                if (i == moves.length - 1) {
+                    document.getElementById('solve').className = "button-actions";
+                    solving = false;
+                    setTimeout(unlock, (sliderDuration + 75));
+                    toggleButtons(false);
+                    document.getElementById('scramble').classList.remove('disabled-button');
+                    document.getElementById('scramble').disabled = false;
+                }
+            }, (sliderDuration + 75) * i);
+        }
+
+        if (moves.length == 0) {
+            document.getElementById('solve').className = "button-actions";
+            solving = false;
+            setTimeout(unlock, (sliderDuration + 75));
+            toggleButtons(false);
+            document.getElementById('scramble').classList.remove('disabled-button');
+            document.getElementById('scramble').disabled = false;
+        }
+    }
+    // console.log(cube.children);
+});
+
+function getColorMap() {
+    let map = "";
+    let pos = new THREE.Vector3();
+    // sides
+    for (let y = 1; y >= -1; y--) {
+        let mult = 1;
+        pos.set(-1, y, 1);
+        for (let j = 0; j < 2; ++j) {
+            for (let i = 0; i < 3; ++i) {
+                pos.x = -mult + i * mult;
+                let stickers = getCubie(pos).getObjectByName("stickers");
+                map += getSticker(stickers, 2) + " ";
+            }
+            for (let i = 0; i < 3; ++i) {
+                pos.z = mult - i * mult;
+                let stickers = getCubie(pos).getObjectByName("stickers");
+                map += getSticker(stickers, 0) + " ";
+            }
+            mult *= -1;
+        }
+    }
+    // up and down
+    for (let y = 1; y >= -1; y -= 2) {
+        let x = [0, 1, 1, 1, 0, -1, -1, -1];
+        let z = [1, 1, 0, -1, -1, -1, 0, 1];
+        for (let i = 0; i < 8; ++i) {
+            pos.set(x[i], y, z[i]);
+            let stickers = getCubie(pos).getObjectByName("stickers");
+            map += getSticker(stickers, 1) + " ";
+        }
+    }
+    // console.log(getCubie(new THREE.Vector3(1, 1, 1)));
+    // console.log(map);
+    return map;
+/*
+-1  1   1
+0   1   1
+1   1   1
+
+1   1   1
+1   1   0
+1   1   -1
+
+1   1   -1
+0   1   -1
+-1  1   -1
+
+-1  1   -1
+-1  1   0
+-1  1   1
+
+up/down
+0   1   1
+1   1   1
+
+1   1   0
+1   1   -1
+
+0   1   -1
+-1  1   -1
+
+-1  1   0
+-1  1   1
+
+*/
+
+}
+
+function getCubie(pos) {
+    reset();
+    // console.log("pos:", pos);
+    for (let i = 0; i < cube.children.length; ++i) {
+        let cubie = cube.children[i];
+        // console.log(cubie);
+        let cubiePos = new THREE.Vector3();
+        cubie.getWorldPosition(cubiePos);
+        let cubeNormal = new THREE.Matrix3().getNormalMatrix(cube.matrixWorld);
+        cubiePos.applyMatrix3(cubeNormal.clone().invert());
+        cubiePos.set(Math.round(cubiePos.x), Math.round(cubiePos.y), Math.round(cubiePos.z));
+        // let childPos = new THREE.Vector3(Math.round(child.position.x), Math.round(child.position.y), Math.round(child.position.z));
+        // console.log(pos, cubiePos);
+        if (pos.equals(cubiePos)) {
+            // console.log(cubie);
+            return cubie;
+        }
+    }
+    console.log("not found");
+    return null;
+}
+
+// finds sticker in a sticker group that is the axis's face (0 = x, 1 = y, 2 = z)
+// returns the color as a string
+function getSticker(stickers, axis) {
+    for (let i = 0; i < stickers.children.length; ++i) {
+        let sticker = stickers.children[i];
+
+        let normals = sticker.geometry.attributes.normal.array;
+        let faceNorm = new THREE.Vector3(normals[0], normals[1], normals[2]);
+        let faceNormal = new THREE.Matrix3().getNormalMatrix(sticker.matrixWorld);
+        let cubeNormal = new THREE.Matrix3().getNormalMatrix(cube.matrixWorld);
+        faceNorm.applyMatrix3(faceNormal).normalize();
+        faceNorm.applyMatrix3(cubeNormal.clone().invert());
+        faceNorm.set(Math.round(faceNorm.x), Math.round(faceNorm.y), Math.round(faceNorm.z));
+        normArr = [Math.round(faceNorm.x), Math.round(faceNorm.y), Math.round(faceNorm.z)];
+
+        // compare to 1 instead of != 0, since -0 exists
+        if (Math.abs(normArr[axis]) == 1) {
+            let colors = ["G", "B", "Y", "W", "R", "O"];
+            for (let i = 0; i < 6; ++i) {
+                 if (sticker.material.color.equals(stickerMats[i].color)) {
+                     return colors[i];
+                 }
+            }
+        }
+    }
+    return null; 
 }
 
 function randomInt(max) {
@@ -1286,11 +1410,11 @@ document.getElementById('menu').addEventListener("mouseout", function () {
 
 // stats.domElement.style.right = '0px';
 function animate() {
-//     stats.begin();
+    // stats.begin();
     TWEEN.update();
-//     stats.update();
+    // stats.update();
     renderer.render(scene, camera);
-//     stats.end();
+    // stats.end();
     requestAnimationFrame(animate);
 }
 

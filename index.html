@@ -7,6 +7,7 @@
         <script src="libraries/tween.js"></script>
         <script src="libraries/OrbitControls.js"></script>
         <script src="libraries/stats.min.js"></script>
+        <script src="solver/rubiksCubeSolver.js"></script>
         <link rel="stylesheet" href="rubiksCubeGeneral.css">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     </head>
@@ -86,6 +87,7 @@
                             
                             <ul class="dropdown-menu dropdown-menu--animated" id="dropdown-menu">
                                 <!-- <i class='bx bx-palette'></i> -->
+                                <li class="dropdown-palette-4" id="color-universal"><img src="paletteIcons/paletteUniversal.png" class="palette-custom"></li>
                                 <li class="dropdown-palette-3" id="color-nature"><img src="paletteIcons/paletteNature.png" class="palette-custom"></li>
                                 <li class="dropdown-palette-2" id="color-pastel"><img src="paletteIcons/palettePastel.png" class="palette-custom"></li>
                                 <li class="dropdown-palette-1" id="color-default"><img src="paletteIcons/paletteRegular.png" class="palette-custom"></li>
@@ -104,6 +106,7 @@
                         <button class="button-actions" id="realign"><i class='bx bx-reset'></i></button>
                         <button class="button-actions" id="idle-rotate"><i class='bx bx-play' id="idle-rotate-icon"></i></button>
                         <button class="button-actions" id="scramble"><i class='bx bx-shuffle'></i></button>
+                        <button class="button-actions" id="solve"><i class='bx bx-bulb'></i></button>
                     </div>
                 </div>
             </div>
