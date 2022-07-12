@@ -723,17 +723,74 @@ function onClickRealign() {
 
 // Buttons
 let locked = false;
-function onClickRotate(face, move, scramble = false) {
-    
-    let duration;
-    if (!scramble) {
-        if (locked) { return; }
-    }
+function onClickRotate(face, move) {
+    if (locked) { return; }
 
-    // console.log("entered");
     reset();
     getFace(face);
-    deltaR = Math.PI;
+    let deltaR = Math.PI;
+    let duration = sliderDuration;
+    if (move == 'clock') {
+        deltaR = -Math.PI / 2;
+    }
+    else if (move == 'counter') {
+        deltaR = Math.PI / 2;
+    }
+    else {
+        if (duration != 0) {
+            duration = sliderDuration + 50;
+        }
+    }
+    if (convertRotation.get(face).val < 0) {
+        deltaR *= -1;
+    }
+
+    // Tweening
+    let axisR = face.rotation.z;
+    if (convertRotation.get(face).axis == 0) {
+        axisR = face.rotation.x;
+    }
+    else if (convertRotation.get(face).axis == 1) {
+        axisR = face.rotation.y;
+    }
+
+    let curR = { axis: axisR };
+    let newR = { axis: axisR + deltaR };
+    
+    let tween = new TWEEN.Tween(curR)
+        .to(newR, duration)
+        .easing(TWEEN.Easing.Quadratic.InOut)
+        .onUpdate(function() {
+            if (convertRotation.get(face).axis == 0) {
+                face.rotation.x = curR.axis;
+            }
+            else if (convertRotation.get(face).axis == 1) {
+                face.rotation.y = curR.axis;
+            }
+            else {
+                face.rotation.z = curR.axis;
+            }
+        })
+        .onComplete(function() {
+            unlock();
+        });
+    
+    locked = true;
+    tween.start();
+}
+
+function scramble(num, i, prevA) {
+    let duration;
+    let scrambleFaces = [front, back, left, right, up, down];
+    let scrambleDir = ['clock', 'counter', 'double'];
+    let a = randomInt(6);
+    while (a == prevA) { a = randomInt(6); }
+    let b = randomInt(3);
+    let face = scrambleFaces[a];
+    let move = scrambleDir[b];
+    reset();
+    getFace(face);
+    let deltaR = Math.PI;
     duration = sliderDuration;
     if (move == 'clock') {
         deltaR = -Math.PI / 2;
@@ -761,7 +818,7 @@ function onClickRotate(face, move, scramble = false) {
 
     let curR = { axis: axisR };
     let newR = { axis: axisR + deltaR };
-    new TWEEN.Tween(curR)
+    let tween = new TWEEN.Tween(curR)
         .to(newR, duration)
         .easing(TWEEN.Easing.Quadratic.InOut)
         .onUpdate(function () {
@@ -774,13 +831,113 @@ function onClickRotate(face, move, scramble = false) {
             else {
                 face.rotation.z = curR.axis;
             }
-        })
-        .start();
+        });
+        if (i < num) {
+            tween.onComplete(function() {
+                tween.chain(scramble(num, i + 1, a));
+            });
+        }
+        else {
+            tween.onComplete(function() {
+                document.getElementById('scramble').className = "button-actions";
+                scrambleOn = false;
+                unlock();
+                toggleButtons(false);
+                document.getElementById('solve').classList.remove('disabled-button');
+                document.getElementById('solve').disabled = false;
+            });
+        }
     
-    locked = true;
-    if (!scramble) {
-        setTimeout(unlock, duration + 5);
+    return tween;
+}
+
+function solve(moves, i) {
+    if (moves.length == 0) {
+        document.getElementById('solve').className = "button-actions";
+        solving = false;
+        unlock();
+        toggleButtons(false);
+        document.getElementById('scramble').classList.remove('disabled-button');
+        document.getElementById('scramble').disabled = false;
+        return;
     }
+
+    let moveConv = {
+        "F": front,
+        "B": back,
+        "L": left,
+        "R": right,
+        "U": up,
+        "D": down
+    };
+
+    let face = moveConv[moves[i][0]];
+    let direction = "clock";
+    if (moves[i].length == 2) {
+        direction = moves[i][1] == "2" ? "double" : "counter";
+    }
+
+    reset();
+    getFace(face);
+    let deltaR = Math.PI;
+    let duration = sliderDuration;
+    if (direction == 'clock') {
+        deltaR = -Math.PI / 2;
+    }
+    else if (direction == 'counter') {
+        deltaR = Math.PI / 2;
+    }
+    else if (direction == 'double') {
+        if (duration != 0) {
+            duration = sliderDuration + 50;
+        }
+    }
+    if (convertRotation.get(face).val < 0) {
+        deltaR *= -1;
+    }
+
+    // Tweening
+    let axisR = face.rotation.z;
+    if (convertRotation.get(face).axis == 0) {
+        axisR = face.rotation.x;
+    }
+    else if (convertRotation.get(face).axis == 1) {
+        axisR = face.rotation.y;
+    }
+
+    let curR = { axis: axisR };
+    let newR = { axis: axisR + deltaR };
+    let tween = new TWEEN.Tween(curR)
+        .to(newR, duration)
+        .easing(TWEEN.Easing.Quadratic.InOut)
+        .onUpdate(function () {
+            if (convertRotation.get(face).axis == 0) {
+                face.rotation.x = curR.axis;
+            }
+            else if (convertRotation.get(face).axis == 1) {
+                face.rotation.y = curR.axis;
+            }
+            else {
+                face.rotation.z = curR.axis;
+            }
+        });
+        if (i < moves.length - 1) {
+            tween.onComplete(function() {
+                tween.chain(solve(moves, i + 1));
+            });
+        }
+        else {
+            tween.onComplete(function() {
+                document.getElementById('solve').className = "button-actions";
+                solving = false;
+                unlock();
+                toggleButtons(false);
+                document.getElementById('scramble').classList.remove('disabled-button');
+                document.getElementById('scramble').disabled = false;
+            });
+        }
+
+    return tween;
 }
 
 function unlock () {
@@ -1150,27 +1307,9 @@ document.getElementById('scramble').addEventListener("click", function () {
         document.getElementById('solve').disabled = true;
         document.getElementById('scramble').className = "button-actions active-button";
         scrambleOn = true;
-        let scrambleFaces = [front, back, left, right, up, down];
-        let scrambleDir = ['clock', 'counter', 'double'];
-        let prevA = -1;
-        for (let i = 0; i < 20; ++i) {
-            let a = randomInt(6);
-            while (a == prevA) { a = randomInt(6); }
-            let b = randomInt(3);
-            
-            setTimeout(function () {
-                onClickRotate(scrambleFaces[a], scrambleDir[b], true);
-                if (i == 19) {
-                    document.getElementById('scramble').className = "button-actions";
-                    scrambleOn = false;
-                    setTimeout(unlock, (sliderDuration + 75));
-                    toggleButtons(false);
-                    document.getElementById('solve').classList.remove('disabled-button');
-                    document.getElementById('solve').disabled = false;
-                }
-            }, (sliderDuration + 75) * i);
-            prevA = a;
-        }
+
+        let tween = scramble(20, 1, -1);
+        tween.start();
     }
 });
 
@@ -1185,14 +1324,6 @@ function toggleButtons(disable) {
             buttonMoves[i].classList.remove('disabled-button');
             buttonMoves[i].disabled = false;
         }
-    }
-    if (disable) {
-        document.getElementById('slider-speed').classList.add('disabled-button');
-        document.getElementById('slider-speed').disabled = true;
-    }
-    else {
-        document.getElementById('slider-speed').classList.remove('disabled-button');
-        document.getElementById('slider-speed').disabled = false;
     }
 }
 
@@ -1211,43 +1342,10 @@ document.getElementById('solve').addEventListener("click", function() {
         cube.solveOLL();
         cube.solvePLL();
         moves = cube.moves;
-
-        let moveConv = {
-            "F": front,
-            "B": back,
-            "L": left,
-            "R": right,
-            "U": up,
-            "D": down
-        };
-        for (let i = 0; i < moves.length; ++i) {
-            let direction = "clock";
-            if (moves[i].length == 2) {
-                direction = moves[i][1] == "2" ? "double" : "counter";
-            }
-            setTimeout(function () {
-                onClickRotate(moveConv[moves[i][0]], direction, true);
-                if (i == moves.length - 1) {
-                    document.getElementById('solve').className = "button-actions";
-                    solving = false;
-                    setTimeout(unlock, (sliderDuration + 75));
-                    toggleButtons(false);
-                    document.getElementById('scramble').classList.remove('disabled-button');
-                    document.getElementById('scramble').disabled = false;
-                }
-            }, (sliderDuration + 75) * i);
-        }
-
-        if (moves.length == 0) {
-            document.getElementById('solve').className = "button-actions";
-            solving = false;
-            setTimeout(unlock, (sliderDuration + 75));
-            toggleButtons(false);
-            document.getElementById('scramble').classList.remove('disabled-button');
-            document.getElementById('scramble').disabled = false;
-        }
+        
+        let tween = solve(moves, 0);
+        tween.start();
     }
-    // console.log(cube.children);
 });
 
 function getColorMap() {
@@ -1320,19 +1418,14 @@ up/down
 
 function getCubie(pos) {
     reset();
-    // console.log("pos:", pos);
     for (let i = 0; i < cube.children.length; ++i) {
         let cubie = cube.children[i];
-        // console.log(cubie);
         let cubiePos = new THREE.Vector3();
         cubie.getWorldPosition(cubiePos);
         let cubeNormal = new THREE.Matrix3().getNormalMatrix(cube.matrixWorld);
         cubiePos.applyMatrix3(cubeNormal.clone().invert());
         cubiePos.set(Math.round(cubiePos.x), Math.round(cubiePos.y), Math.round(cubiePos.z));
-        // let childPos = new THREE.Vector3(Math.round(child.position.x), Math.round(child.position.y), Math.round(child.position.z));
-        // console.log(pos, cubiePos);
         if (pos.equals(cubiePos)) {
-            // console.log(cubie);
             return cubie;
         }
     }
