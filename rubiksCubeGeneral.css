@@ -168,14 +168,14 @@ input:checked + .toggle-slider:before {
 
 .moves-grid {
     display: none;
-    grid-template-columns: 35px 35px 35px 35px 35px 35px;
+    grid-template-columns: 35px 35px 35px 35px 35px 35px 35px 35px 35px;
     column-gap: 3px;
     row-gap: 3px;
 }
 
 .moves-grid-condensed {
     display: grid;
-    grid-template-columns: 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px 50px;
     column-gap: 3px;
     row-gap: 3px;
 }

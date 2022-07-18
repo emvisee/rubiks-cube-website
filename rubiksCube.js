@@ -66,27 +66,37 @@ function onMouseDown(evt) {
 
         if (faceNorm.x != 0) {
             faceX = cubiePos.y > 0 ? up : down;
+            if (cubiePos.y == 0) faceX = midE;
             faceY = cubiePos.z == 1 ? front : back;
+            if (cubiePos.z == 0) faceY = midS; 
         }
         else if (faceNorm.y != 0) {
             let epsilon = 0.00001;
             let cubeYRounded = Math.round(cube.rotation.y / (Math.PI / 2)) * Math.PI / 2;
             if (Math.abs(cubeYRounded - Math.PI / 2) < epsilon) {
                 faceX = cubiePos.x == 1 ? right : left;
+                if (cubiePos.x == 0) faceX = midM;
                 faceY = cubiePos.z == 1 ? front : back;
+                if (cubiePos.z == 0) faceY = midS;
             }
             else if (Math.abs(cubeYRounded - Math.PI * 3 / 2) < epsilon) {
                 faceX = cubiePos.x == 1 ? right : left;
+                if (cubiePos.x == 0) faceX = midM;
                 faceY = cubiePos.z == 1 ? front : back;
+                if (cubiePos.z == 0) faceY = midS;
             }
             else {
                 faceX = cubiePos.z == 1 ? front : back;
+                if (cubiePos.z == 0) faceX = midS;
                 faceY = cubiePos.x == 1 ? right : left;
+                if (cubiePos.x == 0) faceY = midM;
             }
         }
         else {
             faceX = cubiePos.y > 0 ? up : down;
+            if (cubiePos.y == 0) faceX = midE;
             faceY = cubiePos.x == 1 ? right : left;
+            if (cubiePos.x == 0) faceY = midM;
         }
     }
     else {
@@ -119,18 +129,22 @@ function onMouseMove(evt) {
     mouseX = evt.clientX;
     mouseY = evt.clientY;
 
-    // get initial x or y movement
-    if (numMouseMove < 5) {
-        face = Math.abs(initialDeltaX) >= Math.abs(initialDeltaY) ? faceX : faceY;
-        deltaAxis = Math.abs(initialDeltaX) >= Math.abs(initialDeltaY) ? 'x' : 'y';
-        // console.log(deltaAxis);
+    if (mouseDown != 1) {
+        // get initial x or y movement
+        if (numMouseMove < 5) {
+            face = Math.abs(initialDeltaX) >= Math.abs(initialDeltaY) ? faceX : faceY;
+            deltaAxis = Math.abs(initialDeltaX) >= Math.abs(initialDeltaY) ? 'x' : 'y';
+            // console.log(deltaAxis);
+        }
+        numMouseMove++;
     }
-    numMouseMove++;
+
 
     if (mouseDown == 1) {
         rotateCube(deltaX, deltaY);
     }
     else if (numMouseMove == 5) {
+        reset();
         getFace(face);
     }
     else if (numMouseMove >= 5) {
@@ -151,8 +165,9 @@ function onMouseUp(evt) {
 
         // Tweening
         let duration = sliderDuration / 2;
-        locked = true;
-
+        duration = 150;
+        reset();
+        getFace(face);
         let axisR = face.rotation.z;
         if (convertRotation.get(face).axis == 0) {
             axisR = face.rotation.x;
@@ -163,7 +178,11 @@ function onMouseUp(evt) {
         
         let correction;
         if (speed >= 0.25) {
-            duration = sliderDuration;
+            // duration = sliderDuration;
+            console.log(speed);
+            if (speed > 0.8) speed = 0.8;
+            duration = 1100 - (speed + 0.2) * 1000;
+            console.log(duration);
             if (deltaCoord > 0) {
                 correction = Math.ceil(axisR / (Math.PI / 2)) * Math.PI / 2;
             }
@@ -179,9 +198,9 @@ function onMouseUp(evt) {
         let curR = { axis: axisR };
         let newR = { axis: correction };
         
-        new TWEEN.Tween(curR)
+        let tween = new TWEEN.Tween(curR)
             .to(newR, duration)
-            .easing(TWEEN.Easing.Quadratic.InOut)
+            .easing(TWEEN.Easing.Sinusoidal.Out)
             .onUpdate(function () {
                 if (convertRotation.get(face).axis == 0) {
                     face.rotation.x = curR.axis;
@@ -193,9 +212,11 @@ function onMouseUp(evt) {
                     face.rotation.z = curR.axis;
                 }
             })
-            .start();
-        
-        setTimeout(unlock, duration + 5);
+            .onComplete(function() {
+                unlock();
+            });
+        locked = true;
+        tween.start();
     }
 
     mouseDown = 0;
@@ -230,7 +251,7 @@ function rotateFace(deltaX, deltaY, deltaAxis, face, faceNorm) {
         
     // correct deltaCoord for back, right
     if (faceNorm.x == 1 || faceNorm.z == -1) {
-        if (face != up && face != down) {
+        if (face != up && face != down && face != midE) {
             deltaCoord *= -1;
         }
     }
@@ -238,13 +259,13 @@ function rotateFace(deltaX, deltaY, deltaAxis, face, faceNorm) {
     epsilon = 0.0001;
     let cubeYRounded = Math.round(cube.rotation.y / (Math.PI / 2)) * Math.PI / 2;
     if (faceNorm.y == 1) {
-        if (face == front || face == back) {
+        if (face == front || face == back || face == midS) {
             // if cubeY is 0, 270, 360
             if (Math.abs(cubeYRounded) < epsilon || Math.abs(cubeYRounded - Math.PI * 2) < epsilon || Math.abs(cubeYRounded - Math.PI * 3 / 2) < epsilon) {
                 deltaCoord *= -1;
             }
         }
-        if (face == left || face == right) {
+        if (face == left || face == right || face == midM) {
             // if cubeY is 180, 270
             if (Math.abs(cubeYRounded - Math.PI) < epsilon || Math.abs(cubeYRounded - Math.PI * 3 / 2) < epsilon) {
                 deltaCoord *= -1;
@@ -253,13 +274,13 @@ function rotateFace(deltaX, deltaY, deltaAxis, face, faceNorm) {
     }
     // correct deltaCoord for bottom face
     if (faceNorm.y == -1) {
-        if (face == front || face == back) {
+        if (face == front || face == back || face == midS) {
             // if cubeY is 180, 270
             if (Math.abs(cubeYRounded - Math.PI) < epsilon || Math.abs(cubeYRounded - Math.PI * 3 / 2) < epsilon) {
                 deltaCoord *= -1;
             }
         }
-        if (face == left || face == right) {
+        if (face == left || face == right || face == midM) {
             // if cubeY is 90, 180
             if (Math.abs(cubeYRounded - Math.PI) < epsilon || Math.abs(cubeYRounded - Math.PI / 2) < epsilon) {
                 deltaCoord *= -1;
@@ -270,13 +291,13 @@ function rotateFace(deltaX, deltaY, deltaAxis, face, faceNorm) {
     const cubeX = posMod(cube.rotation.x, Math.PI * 2);
     // if bottom is on top
     if (cubeX > Math.PI / 2 && cubeX < Math.PI * 3 / 2) {
-        if (face == front || face == back || face == left || face == right) {
+        if (face == front || face == back || face == left || face == right || face == midM || face == midS) {
             // not up or down
             if (faceNorm.y == 0) {
                 deltaCoord *= -1;
             }
         }
-        if (face == up || face == down) {
+        if (face == up || face == down || face == midE) {
             deltaCoord *= -1;
         }
     }
@@ -318,7 +339,7 @@ function posMod(a, b) {
 // let geometry = new THREE.BoxGeometry(1, 1, 1);
 // let material = new THREE.MeshStandardMaterial({vertexColors: THREE.FaceColors});
 
-let cube, front, back, left, right, up, down, stickerColors, stickerMats, stickerMatsBasic, baseColor, convertRotation, matCubie, matCubieBasic;
+let cube, front, back, left, right, up, down, midM, midE, midS, stickerColors, stickerMats, stickerMatsBasic, baseColor, convertRotation, matCubie, matCubieBasic;
 
 function cubeInit() {
     cube = new THREE.Group();
@@ -329,6 +350,13 @@ function cubeInit() {
     right = new THREE.Group();
     up = new THREE.Group();
     down = new THREE.Group();
+    midM = new THREE.Group();
+    midE = new THREE.Group();
+    midS = new THREE.Group();
+    let groups = [front, back, left, right, up, down, midM, midE, midS];
+    for (const group of groups) {
+        group.name = "group";
+    }
 
     convertRotation = new Map();
     convertRotation.set(front, { axis: 2, val: 1 });
@@ -337,6 +365,9 @@ function cubeInit() {
     convertRotation.set(right, { axis: 0, val: 1 });
     convertRotation.set(up, { axis: 1, val: 1 });
     convertRotation.set(down, { axis: 1, val: -1 });
+    convertRotation.set(midM, { axis: 0, val: 0 });    // follows L
+    convertRotation.set(midE, { axis: 1, val: 0 });    // follows D
+    convertRotation.set(midS, { axis: 2, val: 0 });    // follows F
 
     // Colors (R, L, U, D, F, B)
     stickerColors = [
@@ -371,6 +402,9 @@ function cubeInit() {
     cube.attach(right);
     cube.attach(up);
     cube.attach(down);
+    cube.attach(midM);
+    cube.attach(midE);
+    cube.attach(midS);
     cube.position.set(0, 0, 0);
     
     // Cubie
@@ -630,7 +664,7 @@ function getFace(face) {
         let pos = [coords.x, coords.y, coords.z];
         let rotation = convertRotation.get(face);
         let axis = rotation.axis;
-        if (Math.round(pos[axis]) == rotation.val) {
+        if (Math.round(pos[axis]) == rotation.val && cube.children[i].name != "group") {
             active.push(cube.children[i]);
         }
     }
@@ -638,13 +672,15 @@ function getFace(face) {
     for (let i in active) {
         face.attach(active[i]);
     }
+    // console.log(active);
 }
 
 function reset() {
     for (let i in active) {
         cube.attach(active[i]);
     }
-    active = [];
+    active.length = 0;
+    // console.log(active);
 }
 
 // Idle animation
@@ -723,7 +759,7 @@ function onClickRealign() {
 
 // Buttons
 let locked = false;
-function onClickRotate(face, move) {
+function onClickRotate(face, move, solve = false) {
     if (locked) { return; }
 
     reset();
@@ -741,7 +777,11 @@ function onClickRotate(face, move) {
             duration = sliderDuration + 50;
         }
     }
-    if (convertRotation.get(face).val < 0) {
+    if (convertRotation.get(face).val <= 0) {
+        deltaR *= -1;
+    }
+    // midS exception
+    if (convertRotation.get(face).val == 0 && convertRotation.get(face).axis == 2) {
         deltaR *= -1;
     }
 
@@ -776,7 +816,8 @@ function onClickRotate(face, move) {
         });
     
     locked = true;
-    tween.start();
+    if (solve) return tween;
+    else tween.start();
 }
 
 function scramble(num, i, prevA) {
@@ -851,15 +892,18 @@ function scramble(num, i, prevA) {
     return tween;
 }
 
-function solve(moves, i) {
+function solveMoves(moves, i) {
     if (moves.length == 0) {
-        document.getElementById('solve').className = "button-actions";
-        solving = false;
-        unlock();
-        toggleButtons(false);
-        document.getElementById('scramble').classList.remove('disabled-button');
-        document.getElementById('scramble').disabled = false;
-        return;
+        let tween = new TWEEN.Tween({x: 0}).to({x: 0}, 0)
+        .onComplete(function() {
+            document.getElementById('solve').className = "button-actions";
+            solving = false;
+            unlock();
+            toggleButtons(false);
+            document.getElementById('scramble').classList.remove('disabled-button');
+            document.getElementById('scramble').disabled = false;
+        });
+        return tween;
     }
 
     let moveConv = {
@@ -923,7 +967,7 @@ function solve(moves, i) {
         });
         if (i < moves.length - 1) {
             tween.onComplete(function() {
-                tween.chain(solve(moves, i + 1));
+                tween.chain(solveMoves(moves, i + 1));
             });
         }
         else {
@@ -1024,8 +1068,8 @@ document.getElementById('double-toggle').addEventListener("click", function() {
 });
 
 // Moves
-let rotateButtonClasses = ['rotate-front', 'rotate-back', 'rotate-left', 'rotate-right', 'rotate-up', 'rotate-down'];
-let rotateHTML = ["FRONT", "BACK", "LEFT", "RIGHT", "UP", "DOWN"];
+let rotateButtonClasses = ['rotate-front', 'rotate-back', 'rotate-left', 'rotate-right', 'rotate-up', 'rotate-down', 'rotate-midS', 'rotate-midM', 'rotate-midE'];
+let rotateHTML = ["FRONT", "BACK", "LEFT", "RIGHT", "UP", "DOWN", "SLICE S", "SLICE M", "SLICE E"];
 for (let n = 0; n < rotateButtonClasses.length; ++n) {
     let rotateFace = document.getElementsByClassName(rotateButtonClasses[n]);
     for (let i = 0; i < rotateFace.length; ++i) {
@@ -1090,8 +1134,17 @@ for (let i = 0; i < moveButtonClasses.length; ++i) {
             else if (moveButtonClasses[i].innerHTML.charAt(0) == 'U') {
                 onClickRotate(up, direction);
             }
-            else {
+            else if (moveButtonClasses[i].innerHTML.charAt(0) == 'D') {
                 onClickRotate(down, direction);
+            }
+            else if (moveButtonClasses[i].innerHTML.charAt(0) == 'S') {
+                onClickRotate(midS, direction);
+            }
+            else if (moveButtonClasses[i].innerHTML.charAt(0) == 'M') {
+                onClickRotate(midM, direction);
+            }
+            else {
+                onClickRotate(midE, direction);
             }
         });
     }
@@ -1123,10 +1176,25 @@ for (let i = 0; i < moveButtonClasses.length; ++i) {
                 else if (ccToggle) { onClickRotate(up, 'counter'); }
                 else { onClickRotate(up, 'double'); }
             }
-            else {
+            else if (moveButtonClasses[i].innerHTML.charAt(0) == 'D') {
                 if (cToggle) { onClickRotate(down, 'clock'); }
                 else if (ccToggle) { onClickRotate(down, 'counter'); }
                 else { onClickRotate(down, 'double'); }
+            }
+            else if (moveButtonClasses[i].innerHTML.charAt(0) == 'S') {
+                if (cToggle) { onClickRotate(midS, 'clock'); }
+                else if (ccToggle) { onClickRotate(midS, 'counter'); }
+                else { onClickRotate(midS, 'double'); }
+            }
+            else if (moveButtonClasses[i].innerHTML.charAt(0) == 'M') {
+                if (cToggle) { onClickRotate(midM, 'clock'); }
+                else if (ccToggle) { onClickRotate(midM, 'counter'); }
+                else { onClickRotate(midM, 'double'); }
+            }
+            else {
+                if (cToggle) { onClickRotate(midE, 'clock'); }
+                else if (ccToggle) { onClickRotate(midE, 'counter'); }
+                else { onClickRotate(midE, 'double'); }
             }
         });
     }
@@ -1335,16 +1403,27 @@ document.getElementById('solve').addEventListener("click", function() {
         document.getElementById('scramble').disabled = true;
         document.getElementById('solve').className = "button-actions active-button";
         solving = true;
-        map = getColorMap();
-        let cube = new RubiksCube(map);
-        cube.solveCross();
-        cube.solveF2L();
-        cube.solveOLL();
-        cube.solvePLL();
-        moves = cube.moves;
+        let tween = solve();
+        // map = getColorMap();
+        // let cube = new RubiksCube(map);
+        // cube.solveCross();
+        // cube.solveF2L();
+        // cube.solveOLL();
+        // cube.solvePLL();
+        // moves = cube.moves;
         
-        let tween = solve(moves, 0);
-        tween.start();
+        // let tweenB = solve(moves, 0);
+        // if (tweenA == null) {
+        //     if (tweenB != null) tweenB.start();
+        // }
+        // else {
+        //     if (tweenB != null) {
+        //         tweenA.chain(tweenB);
+        //         tweenA.start();
+        //     }
+        //     else tweenA.start();
+        // }
+        if (tween != null) tween.start();
     }
 });
 
@@ -1459,6 +1538,107 @@ function getSticker(stickers, axis) {
         }
     }
     return null; 
+}
+
+function solve() {
+    reset();
+    let tweenY = new TWEEN.Tween({x: 0}).to({x: 0}, 0);
+    for (let i = 0; i < cube.children.length; ++i) {
+        let cubie = cube.children[i];
+        let cubiePos = new THREE.Vector3();
+        cubie.getWorldPosition(cubiePos);
+        let cubeNormal = new THREE.Matrix3().getNormalMatrix(cube.matrixWorld);
+        cubiePos.applyMatrix3(cubeNormal.clone().invert());
+        cubiePos.set(Math.round(cubiePos.x), Math.round(cubiePos.y), Math.round(cubiePos.z));
+        let cubieArr = [cubiePos.x, cubiePos.y, cubiePos.z];
+
+        let numZero = 0;
+        if (cubiePos.x == 0) numZero++;
+        if (cubiePos.y == 0) numZero++;
+        if (cubiePos.z == 0) numZero++;
+        if (numZero != 2) continue;
+
+        let axis = 2;
+        if (cubiePos.x != 0) axis = 0;
+        else if (cubiePos.y != 0) axis = 1;
+
+        let stickers = cubie.getObjectByName("stickers");
+        let color = getSticker(stickers, axis);
+        if (color == "Y") {
+            // if yellow is on x axis
+            if (axis == 0) {
+                if (cubieArr[axis] > 0) tweenY = onClickRotate(midS, "counter", true);
+                else tweenY = onClickRotate(midS, "clock", true);
+            }
+            // y axis
+            else if (axis == 1) {
+                if (cubieArr[axis] < 0) tweenY = onClickRotate(midS, "double", true);
+            }
+            // z axis
+            else {
+                if (cubieArr[axis] > 0) tweenY = onClickRotate(midM, "counter", true);
+                else tweenY = onClickRotate(midM, "clock", true);
+            }
+        }
+    }
+
+    tweenY.onComplete(function() {
+        reset();
+        unlock();
+        let tweenR = new TWEEN.Tween({x: 0}).to({x: 0}, 0);
+        for (let i = 0; i < cube.children.length; ++i) {
+            let cubie = cube.children[i];
+            let cubiePos = new THREE.Vector3();
+            cubie.getWorldPosition(cubiePos);
+            let cubeNormal = new THREE.Matrix3().getNormalMatrix(cube.matrixWorld);
+            cubiePos.applyMatrix3(cubeNormal.clone().invert());
+            cubiePos.set(Math.round(cubiePos.x), Math.round(cubiePos.y), Math.round(cubiePos.z));
+            let cubieArr = [cubiePos.x, cubiePos.y, cubiePos.z];
+
+            let numZero = 0;
+            if (cubiePos.x == 0) numZero++;
+            if (cubiePos.y == 0) numZero++;
+            if (cubiePos.z == 0) numZero++;
+            if (numZero != 2) continue;
+    
+            let axis = 2;
+            if (cubiePos.x != 0) axis = 0;
+            else if (cubiePos.y != 0) axis = 1;
+    
+            let stickers = cubie.getObjectByName("stickers");
+            let color = getSticker(stickers, axis);
+            
+            if (color == "R") {
+                // if red is on x axis
+                if (axis == 0) {
+                    if (cubieArr[axis] > 0) tweenR = onClickRotate(midE, "counter", true);
+                    else tweenR = onClickRotate(midE, "clock", true);
+                }
+                // y axis
+                else if (axis == 1) {
+                    if (cubieArr[axis] > 0) tweenR = onClickRotate(midM, "clock", true);
+                    else tweenR = onClickRotate(midM, "counter", true);
+                }
+                // z axis
+                else {
+                    if (cubieArr[axis] < 0) tweenR = onClickRotate(midE, "double", true);
+                }
+        
+                tweenR.onComplete(function() {
+                    let map = getColorMap();
+                    let cube = new RubiksCube(map);
+                    cube.solveCross();
+                    cube.solveF2L();
+                    cube.solveOLL();
+                    cube.solvePLL();
+                    let moves = cube.moves;
+                    tweenR.chain(solveMoves(moves, 0));
+                });
+            }
+        }
+        tweenY.chain(tweenR);
+    });
+    return tweenY;
 }
 
 function randomInt(max) {
