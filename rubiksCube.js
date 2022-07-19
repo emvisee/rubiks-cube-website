@@ -893,6 +893,7 @@ function scramble(num, i, prevA) {
 }
 
 function solveMoves(moves, i) {
+    locked = true;
     if (moves.length == 0) {
         let tween = new TWEEN.Tween({x: 0}).to({x: 0}, 0)
         .onComplete(function() {
@@ -1393,6 +1394,8 @@ function toggleButtons(disable) {
             buttonMoves[i].disabled = false;
         }
     }
+    if (disable) locked = true;
+    else locked = false;
 }
 
 let solving = false;
@@ -1541,6 +1544,7 @@ function getSticker(stickers, axis) {
 }
 
 function solve() {
+    locked = true;
     reset();
     let tweenY = new TWEEN.Tween({x: 0}).to({x: 0}, 0);
     for (let i = 0; i < cube.children.length; ++i) {
