@@ -761,7 +761,6 @@ function onClickRealign() {
 let locked = false;
 function onClickRotate(face, move, solve = false) {
     if (locked) { return; }
-
     reset();
     getFace(face);
     let deltaR = Math.PI;
@@ -1544,9 +1543,10 @@ function getSticker(stickers, axis) {
 }
 
 function solve() {
-    locked = true;
+    unlock();
     reset();
     let tweenY = new TWEEN.Tween({x: 0}).to({x: 0}, 0);
+    console.log(tweenY);
     for (let i = 0; i < cube.children.length; ++i) {
         let cubie = cube.children[i];
         let cubiePos = new THREE.Vector3();
@@ -1580,12 +1580,15 @@ function solve() {
             }
             // z axis
             else {
+                console.log('entered');
+                console.log(locked);
                 if (cubieArr[axis] > 0) tweenY = onClickRotate(midM, "counter", true);
                 else tweenY = onClickRotate(midM, "clock", true);
             }
         }
     }
-
+    console.log(tweenY);
+    locked = true;
     tweenY.onComplete(function() {
         reset();
         unlock();
